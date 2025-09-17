@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Intermediate HTML/CSS/JS - Task 2</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Intermediate HTML, CSS & JavaScript — Task 2</h1>
+    <p class="lead">Contact form (with validation), responsive layout (Flexbox & Grid), and a dynamic To-Do list</p>
+  </header>
+
+  <div class="container">
+    <main class="content">
+      <!-- Contact Form -->
+      <section aria-labelledby="contactHeading">
+        <h2 id="contactHeading">Contact Form</h2>
+        <p class="meta">Objective: Build forms with various inputs and add JS validation.</p>
+
+        <form id="contactForm" novalidate>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="name">Full name <span>*</span></label>
+              <input id="name" name="name" type="text" required placeholder="Your full name">
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email <span>*</span></label>
+              <input id="email" name="email" type="email" required placeholder="you@example.com">
+            </div>
+
+            <div class="form-group full">
+              <label for="subject">Subject</label>
+              <input id="subject" name="subject" type="text" placeholder="Subject (optional)">
+            </div>
+
+            <div class="form-group full">
+              <label for="message">Message <span>*</span></label>
+              <textarea id="message" name="message" required placeholder="Write your message..."></textarea>
+            </div>
+          </div>
+
+          <!-- Success / Error message -->
+          <div id="formResult"></div>
+
+          <button type="submit" class="btn">Submit</button>
+        </form>
+      </section>
+
+      <!-- To-Do List -->
+      <section class="todo" aria-labelledby="todoHeading">
+        <h2 id="todoHeading">Dynamic To-Do List</h2>
+        <p class="meta">Objective: Learn DOM manipulation — add/remove tasks dynamically.</p>
+
+        <div class="todo-controls">
+          <input id="taskInput" placeholder="Add a new task...">
+          <button id="addTaskBtn" class="btn" type="button">Add</button>
+        </div>
+
+        <ul id="taskList"></ul>
+      </section>
+    </main>
+
+    <!-- Right side notes -->
+    <aside class="aside" aria-labelledby="infoHeading">
+      <h3 id="infoHeading">Notes & Requirements</h3>
+      <ul>
+        <li>Form must catch empty fields and invalid email format.</li>
+        <li>Layout should adapt for mobile (Flexbox + Grid).</li>
+        <li>To-Do list: add, complete, delete, and save tasks.</li>
+      </ul>
+    </aside>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
